@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block titulo %} Formularios {% endblock %}
+
+{% block contenido %}
+<h1>Bienvenido a INDEX</h1>
+<hr>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Nombre Completo</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for usuario in usuarios %}
+            <tr>
+                <td>{{usuario['first_name']}}</td>
+                <td>{{usuario['last_name']}}</td>
+                <td>{{usuario['first_name']}}  {{usuario['last_name']}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+
+        </tbody>
+    </table>
+
+
+{% endblock %}
